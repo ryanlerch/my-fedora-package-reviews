@@ -8,7 +8,7 @@ URL:                http://code.google.com/p/key-mon/
 Source0:            http://key-mon.googlecode.com/files/key-mon-1.16.tar.gz
 BuildArch:          noarch
 BuildRequires:      python2-devel
-BuildRequires: 	    desktop-file-utils
+BuildRequires:      desktop-file-utils
 %description
 Key-mon is useful for teaching since it shows the current status of your
 keyboard and mouse and you use them in another application.  No longer do
@@ -17,6 +17,7 @@ see the keystroke for themselves.
 
 %prep
 %setup -q
+rm src/keymon/themes/clear/config~
 
 %build
 %{__python2} setup.py build
