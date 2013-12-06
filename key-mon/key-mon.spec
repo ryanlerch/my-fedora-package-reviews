@@ -24,6 +24,13 @@ see the keystroke for themselves.
 %install
 %{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
 desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications icons/%{name}.desktop
+
+for lib in %{buildroot}%{python2_sitelib}/keymon/*.py; do
+ sed '1{\@^#!/usr/bin/python@d}' $lib > $lib.new &&
+ touch -r $lib $lib.new &&
+ mv $lib.new $lib
+done
+
 %files
 %doc README.rst
 %{_bindir}/%{name}
