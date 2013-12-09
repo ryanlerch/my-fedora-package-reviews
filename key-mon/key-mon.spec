@@ -5,7 +5,7 @@ Summary:            A screencast utility that displays your keyboard and mouse s
 Group:              Development/Libraries
 License:            ASL 2.0
 URL:                http://code.google.com/p/key-mon/
-Source0:            http://key-mon.googlecode.com/files/key-mon-1.16.tar.gz
+Source0:            https://pypi.python.org/packages/source/k/key-mon/key-mon-%{version}.zip
 BuildArch:          noarch
 BuildRequires:      python2-devel
 BuildRequires:      desktop-file-utils
