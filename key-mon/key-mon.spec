@@ -9,6 +9,7 @@ Source0:            https://pypi.python.org/packages/source/k/key-mon/key-mon-%{
 BuildArch:          noarch
 BuildRequires:      python2-devel
 BuildRequires:      desktop-file-utils
+
 %description
 Key-mon is useful for teaching since it shows the current status of your
 keyboard and mouse and you use them in another application.  No longer do
