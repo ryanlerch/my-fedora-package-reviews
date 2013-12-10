@@ -1,7 +1,7 @@
 Name:               key-mon
 Version:            1.16
 Release:            1%{?dist}
-Summary:            A screencast utility that displays your keyboard and mouse status
+Summary:            A screen cast utility that displays your keyboard and mouse status
 Group:              Development/Libraries
 License:            ASL 2.0
 URL:                http://code.google.com/p/key-mon/
