@@ -30,6 +30,12 @@ for lib in src/keymon/*.py; do
  mv $lib.new $lib
 done
 
+#make key-mon explicitly call python2
+sed '1d' src/key-mon > src/key-mon.bak
+echo "#!%{__python2}" > src/key-mon
+cat src/key-mon.bak >> src/key-mon
+rm src/key-mon.bak
+
 %build
 %{__python2} setup.py build
 
