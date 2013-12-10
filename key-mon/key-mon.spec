@@ -9,6 +9,9 @@ Source0:            https://pypi.python.org/packages/source/k/key-mon/key-mon-%{
 BuildArch:          noarch
 BuildRequires:      python2-devel
 BuildRequires:      desktop-file-utils
+Requires:           pygtk2
+Requires:           python-xlib
+Requires:           librsvg2
 
 %description
 Key-mon is useful for teaching since it shows the current status of your
