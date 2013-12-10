@@ -36,8 +36,12 @@ done
 %install
 %{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
 desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications icons/%{name}.desktop
+#manually install the manpage
+install -d -m 0755 %{buildroot}%{_mandir}/man1
+install -m 0644 man/%{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 
 %files
+%{_mandir}/man1/%{name}.1*
 %doc README.rst COPYING
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/%{name}.xpm
