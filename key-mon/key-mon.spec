@@ -50,5 +50,5 @@ install -m 0644 man/%{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 %{python2_sitelib}/key_mon-%{version}*
 
 %changelog
-* Fri Dec 06 2013  Ryan Lerch <ryanlerch@fedoraproject.org> 1.16-0
+* Fri Dec 06 2013  Ryan Lerch <ryanlerch@fedoraproject.org> 1.16-1
 - initial package for Fedora
