@@ -35,7 +35,7 @@ done
 desktop-file-install --dir=${RPM_BUILD_ROOT}%{_datadir}/applications icons/%{name}.desktop
 
 %files
-%doc README.rst
+%doc README.rst COPYING
 %{_bindir}/%{name}
 %{_datadir}/pixmaps/%{name}.xpm
 %{_datadir}/applications/%{name}.desktop
