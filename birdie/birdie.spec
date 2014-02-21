@@ -1,13 +1,14 @@
 Name:           birdie
-Version: 	1.1
+Version:        1.1
 Release:        0%{?dist}
 Summary:        A twitter client for Linux
 License:        GPLv3
 URL:            http://birdieapp.github.io
+# Github Source URL
+# https://github.com/birdieapp/birdie/archive/1.1.tar.gz
 Source0:        %{name}-%{version}.tar.gz
 
 BuildRequires: cmake
-BuildRequires: gcc-c++
 BuildRequires: gtk3-devel >= 3.10
 BuildRequires: vala-devel >= 0.22.1
 BuildRequires: intltool
@@ -24,7 +25,7 @@ BuildRequires: webkitgtk3-devel
 BuildRequires: gtksourceview3-devel
 
 %description
-A beautiful Twitter client for GNU/Linux
+A beautiful GNOME Twitter client for Linux
 
 %prep
 %setup -q
