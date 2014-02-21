@@ -4,9 +4,7 @@ Release:        0%{?dist}
 Summary:        A twitter client for Linux
 License:        GPLv3
 URL:            http://birdieapp.github.io
-# Github Source URL
-# https://github.com/birdieapp/birdie/archive/1.1.tar.gz
-Source0:        %{name}-%{version}.tar.gz
+Source0:        https://github.com/birdieapp/%{name}/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires: cmake
 BuildRequires: gtk3-devel >= 3.10
