@@ -63,5 +63,5 @@ fi
 %{_datadir}/indicators/messages/applications/birdie
 
 %changelog
-* Fri Feb 21 2014 Ryan Lerch <ryanlerch@fedoraproject.org> 1.1-0
+* Fri Feb 21 2014 Ryan Lerch <ryanlerch@fedoraproject.org> 1.1-1
 - Initial Release
