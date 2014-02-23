@@ -1,6 +1,6 @@
 Name:           birdie
 Version:        1.1
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        A twitter client for Linux
 License:        GPLv3
 URL:            http://birdieapp.github.io
