@@ -34,6 +34,7 @@ make %{?_smp_mflags}
 
 %install
 make install DESTDIR=%{buildroot}
+%find_lang %{name}
 desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 
 
@@ -51,7 +52,7 @@ fi
 /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
 /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
-%files
+%files -f %{name}.lang
 %doc AUTHORS COPYING NEWS README.md
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
@@ -59,7 +60,6 @@ fi
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*
-%{_datadir}/locale/*/*/birdie.mo
 %{_datadir}/indicators/messages/applications/birdie
 
 %changelog
