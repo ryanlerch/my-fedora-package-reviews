@@ -21,6 +21,7 @@ BuildRequires: libnotify-devel
 BuildRequires: libcanberra-devel
 BuildRequires: webkitgtk3-devel
 BuildRequires: gtksourceview3-devel
+BuildRequires: desktop-file-utils
 
 %description
 A beautiful GNOME Twitter client for Linux
@@ -40,12 +41,14 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 
 %post
 /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null || :
+/usr/bin/update-desktop-database &> /dev/null || :
 
 %postun
 if [ $1 -eq 0 ] ; then
     /usr/bin/glib-compile-schemas %{_datadir}/glib-2.0/schemas &> /dev/null || :
     /bin/touch --no-create %{_datadir}/icons/hicolor &>/dev/null
     /usr/bin/gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
+    /usr/bin/update-desktop-database &> /dev/null || :
 fi
 
 %posttrans
