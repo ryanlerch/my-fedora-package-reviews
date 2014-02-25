@@ -63,7 +63,7 @@ fi
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/*/*
-%{_datadir}/indicators/messages/applications/birdie
+%{_datadir}/indicators/
 
 %changelog
 * Fri Feb 21 2014 Ryan Lerch <ryanlerch@fedoraproject.org> 1.1-1
